@@ -77,6 +77,7 @@
 		AD71CC7E2D8C0759003BDBB7 = {
 			isa = PBXGroup;
 			children = (
+				AD439BC02D91297600BCA083 /* Model */,
 				AD71CC892D8C0759003BDBB7 /* WeeklyAssessment */,
 				AD71CC882D8C0759003BDBB7 /* Products */,
 			);
@@ -93,7 +94,6 @@
 		AD71CC892D8C0759003BDBB7 /* WeeklyAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				AD439BC02D91297600BCA083 /* Model */,
 				AD71CC8A2D8C0759003BDBB7 /* AppDelegate.swift */,
 				AD71CC8C2D8C0759003BDBB7 /* SceneDelegate.swift */,
 				AD71CC8E2D8C0759003BDBB7 /* ViewController.swift */,
