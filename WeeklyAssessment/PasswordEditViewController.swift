@@ -41,14 +41,14 @@ class PasswordEditViewController: UIViewController {
     
     @IBAction func passwordUpdateBtnTapped(_ sendeer: Any) {
         
-        guard let newpassword = secondInputField.text,
-              let conformpassword = thirdInputField.text else {
-            
+        guard let newPassword = secondInputField.text, !newPassword.isEmpty,
+              let confirmPassword = thirdInputField.text, !confirmPassword.isEmpty else {
+            print("Fields cannot be empty")
             return
         }
         
-        if newpassword != conformpassword {
-            
+        if newPassword != confirmPassword {
+
             let alert = UIAlertController(title: "Password does't match", message: "New password and conform password must be same", preferredStyle: .alert)
             
             let ok = UIAlertAction(title: "Okey", style: .default)
@@ -58,7 +58,7 @@ class PasswordEditViewController: UIViewController {
         }
         
         let defaults = UserDefaults.standard
-        defaults.set(secondInputField.text, forKey: "password")
+        defaults.set(newPassword, forKey: "password")
         self.navigationController?.popViewController(animated: true)
     }
 }

@@ -31,21 +31,21 @@ class ViewController: UIViewController {
     
     @IBAction func signUpBtn(_ sender: Any) {
         
-//        guard let emailText = email.text, isValidEmail(emailText) else {
-//            let alert = UIAlertController(title: "Email is not valid!", message: "Please enter a vlid email address", preferredStyle: .alert)
-//
-//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//
-//            return present(alert, animated: true, completion: nil)
-//        }
-//
-//        guard let passwordText = password.text, passwordText.count > 7 else {
-//            let alert = UIAlertController(title: "Not a strong password", message: "Password should be more then 8 in length", preferredStyle: .alert)
-//
-//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//
-//            return present(alert, animated: true, completion: nil)
-//        }
+        guard let emailText = email.text, isValidEmail(emailText) else {
+            let alert = UIAlertController(title: "Email is not valid!", message: "Please enter a vlid email address", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+            return present(alert, animated: true, completion: nil)
+        }
+
+        guard let passwordText = password.text, passwordText.count > 7 else {
+            let alert = UIAlertController(title: "Not a strong password", message: "Password should be more then 8 in length", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+            return present(alert, animated: true, completion: nil)
+        }
         
         let defaults = UserDefaults.standard
         

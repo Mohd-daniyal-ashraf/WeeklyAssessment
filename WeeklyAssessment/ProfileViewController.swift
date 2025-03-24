@@ -33,13 +33,13 @@ class ProfileViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         nameInput.layer.cornerRadius = 10
         
-        
-        
         setUpInputView(view: nameView)
         setUpInputView(view: emailView)
         setUpInputView(view: mobileView)
         setUpInputView(view: addressView)
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
