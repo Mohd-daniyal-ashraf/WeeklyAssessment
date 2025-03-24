@@ -14,8 +14,8 @@ class EmailEditViewController: UIViewController {
  
     @IBOutlet weak var emailView: UIView!
 
-    
     var firstInput: String = ""
+    
     override func viewDidLoad() {   
         
         super.viewDidLoad()

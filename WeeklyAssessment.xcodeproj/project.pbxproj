@@ -10,7 +10,6 @@
 		AD439BC22D912A5D00BCA083 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD439BC12D912A5D00BCA083 /* UserModel.swift */; };
 		AD439BC52D913AE100BCA083 /* EditCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD439BC32D913AE100BCA083 /* EditCellViewController.swift */; };
 		AD4D59322D8D35CC00126CC7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D59312D8D35CC00126CC7 /* ProfileViewController.swift */; };
-		AD4D59342D8D3CB300126CC7 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D59332D8D3CB300126CC7 /* TabbarController.swift */; };
 		AD4D59362D8D4CE500126CC7 /* EmailEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D59352D8D4CE500126CC7 /* EmailEditViewController.swift */; };
 		AD4D59382D8EC57600126CC7 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D59372D8EC57600126CC7 /* NotificationViewController.swift */; };
 		AD4D593B2D8EC71300126CC7 /* NotificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D59392D8EC71300126CC7 /* NotificationCollectionViewCell.swift */; };
@@ -33,7 +32,6 @@
 		AD439BC12D912A5D00BCA083 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AD439BC32D913AE100BCA083 /* EditCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellViewController.swift; sourceTree = "<group>"; };
 		AD4D59312D8D35CC00126CC7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		AD4D59332D8D3CB300126CC7 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		AD4D59352D8D4CE500126CC7 /* EmailEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEditViewController.swift; sourceTree = "<group>"; };
 		AD4D59372D8EC57600126CC7 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		AD4D59392D8EC71300126CC7 /* NotificationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				AD71CC932D8C075B003BDBB7 /* Assets.xcassets */,
 				AD71CC952D8C075B003BDBB7 /* LaunchScreen.storyboard */,
 				AD71CC982D8C075B003BDBB7 /* Info.plist */,
-				AD4D59332D8D3CB300126CC7 /* TabbarController.swift */,
 				AD439BC32D913AE100BCA083 /* EditCellViewController.swift */,
 			);
 			path = WeeklyAssessment;
@@ -193,7 +190,6 @@
 				AD4D59382D8EC57600126CC7 /* NotificationViewController.swift in Sources */,
 				AD4D593B2D8EC71300126CC7 /* NotificationCollectionViewCell.swift in Sources */,
 				AD71CC9F2D8C07C3003BDBB7 /* TabBarViewController.swift in Sources */,
-				AD4D59342D8D3CB300126CC7 /* TabbarController.swift in Sources */,
 				AD71CCA52D8C44EF003BDBB7 /* TodoDataModel.swift in Sources */,
 				AD71CC8F2D8C0759003BDBB7 /* ViewController.swift in Sources */,
 				AD71CC8B2D8C0759003BDBB7 /* AppDelegate.swift in Sources */,

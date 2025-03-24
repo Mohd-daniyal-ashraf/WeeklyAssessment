@@ -58,10 +58,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUPBtn(_ sender: Any) {
-//
+        
         let storyBorad = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyBorad.instantiateViewController(withIdentifier: "ViewController")
-
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

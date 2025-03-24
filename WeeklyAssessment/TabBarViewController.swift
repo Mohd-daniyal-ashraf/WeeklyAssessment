@@ -24,6 +24,7 @@ class TabBarViewController: UIViewController {
     
     var isDeleteEnabled = false
     var isEditEnabled = false
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -103,8 +104,8 @@ extension TabBarViewController: UITableViewDataSource, UITableViewDelegate {
                 cell?.priorityColor.backgroundColor = .systemRed
             default:
                 cell?.priorityColor.backgroundColor = .systemYellow
-
         }
+        
         return cell!
     }
     
@@ -121,6 +122,7 @@ extension TabBarViewController: UITableViewDataSource, UITableViewDelegate {
             
             return UISwipeActionsConfiguration(actions: [deleteAction])
         }
+        
         return nil
     }
     
@@ -137,6 +139,7 @@ extension TabBarViewController: UITableViewDataSource, UITableViewDelegate {
             
             return UISwipeActionsConfiguration(actions: [editAction])
         }
+        
         return nil
     }
 }
@@ -185,6 +188,7 @@ extension TabBarViewController {
 extension TabBarViewController {
     
     func handleEditTodo(at indexPath: IndexPath) {
+        
         let todo = dataSource[indexPath.row]
         
         let alert = UIAlertController(title: "Edit To-Do", message: "Modify details below", preferredStyle: .alert)

@@ -61,6 +61,22 @@ class EditCellViewController: UIViewController {
     
     @IBAction func saveNotificationBtnTapped(_ sender: Any) {
         
+        guard let image = imageTextField.text, !image.isEmpty,
+              let name = nameTextField.text, !name.isEmpty,
+              let email = emailTextField.text, !email.isEmpty,
+              let address = addressTextField.text, !address.isEmpty,
+              let description = descriptionTextField.text, !description.isEmpty else {
+            
+            let alert = UIAlertController(title: "All field required", message: "All field must be filled", preferredStyle: .alert)
+            
+            let okey = UIAlertAction(title: "Okey", style: .default)
+            alert.addAction(okey)
+            
+            present(alert, animated: true)
+            
+            return
+        }
+        
         let updatedUser = User(
             name: nameTextField.text ?? "",
             email: emailTextField.text ?? "",
