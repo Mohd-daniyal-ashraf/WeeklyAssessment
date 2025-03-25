@@ -14,16 +14,18 @@ class TabBarViewController: UIViewController {
     
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var addTodoView: UIView!
-    
-    @IBOutlet weak var brushIcon: UIImageView!
-    
+        
     @IBOutlet weak var addIcon: UIImageView!
     @IBOutlet weak var addBtn: UIButton!
+    
+    @IBOutlet weak var editlbl: UILabel!
+    @IBOutlet weak var deleteLbl: UILabel!
     
     var dataSource: [Todo] = []
     
     var isDeleteEnabled = false
     var isEditEnabled = false
+    
     
     override func viewDidLoad() {
         
@@ -38,13 +40,6 @@ class TabBarViewController: UIViewController {
 
         let nib = UINib(nibName: "TodoTableViewCell", bundle: nil)
         myTableView.register(nib, forCellReuseIdentifier: "TodoTableViewCell")
-        
-        dataSource.append(Todo(todoText: "Build a new SwiftUI App", priority: "normal"))
-        dataSource.append(Todo(todoText: "Update XCode", priority: "low"))
-        dataSource.append(Todo(todoText: "Check your email", priority: "low"))
-        dataSource.append(Todo(todoText: "Fix the bug", priority: "high"))
-        dataSource.append(Todo(todoText: "Implement new feature", priority: "normal"))
-        dataSource.append(Todo(todoText: "Check your email", priority: "high"))
     }
     
     @IBAction func addTodoBtn(_ sender: Any) {
@@ -65,15 +60,27 @@ class TabBarViewController: UIViewController {
         
         isEditEnabled.toggle()
         myTableView.reloadData()
+
+        if isEditEnabled {
+            
+            editlbl.textColor = .systemBlue
+        } else {
+            
+            editlbl.textColor = .white
+        }
     }
     
     @IBAction func deleteBtn(_ sender: Any) {
         
         isDeleteEnabled.toggle()
         myTableView.reloadData()
-        brushIcon.tintColor = .gray
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            self.brushIcon.tintColor = .white
+        
+        if isDeleteEnabled {
+            
+            deleteLbl.textColor = .systemBlue
+        } else {
+            
+            deleteLbl.textColor = .white
         }
     }
 }
@@ -94,7 +101,7 @@ extension TabBarViewController: UITableViewDataSource, UITableViewDelegate {
         cell?.todoText.text = row.todoText
         cell?.priority.text = row.priority
         
-        switch cell?.priority.text {
+        switch cell?.priority.text?.lowercased() {
             
             case "low":
                 cell?.priorityColor.backgroundColor = .systemBlue

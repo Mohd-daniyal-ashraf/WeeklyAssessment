@@ -28,8 +28,24 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginBtnTapped(_ sender: Any) {
         
-        let defaults = UserDefaults.standard
+        guard let emailText = emailTextField.text, !emailText.isEmpty,
+              let passwordText = passwordTextField.text, !passwordText.isEmpty else {
             
+            let alert = UIAlertController(title: "Fields are missing",
+                                          message: "Fill all requireed fieeld",
+                                          preferredStyle: .alert)
+            
+            let okey = UIAlertAction(title: "Okey", style: .default, handler: nil)
+            alert.addAction(okey)
+            
+            return self.present(alert, animated: true)
+        }
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        
+        let defaults = UserDefaults.standard
+        
         if defaults.string(forKey: "email") != nil && defaults.string(forKey: "password") != nil {
             
             let storyBorad = UIStoryboard(name: "Main", bundle: nil)
@@ -62,6 +78,7 @@ class LoginViewController: UIViewController {
         let storyBorad = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyBorad.instantiateViewController(withIdentifier: "ViewController")
         self.navigationController?.pushViewController(viewController, animated: true)
+     
     }
     
 }

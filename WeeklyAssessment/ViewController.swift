@@ -59,6 +59,11 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    @IBAction func loginBtnTapped(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ViewController {
